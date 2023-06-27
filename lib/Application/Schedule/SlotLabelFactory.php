@@ -94,7 +94,7 @@ class SlotLabelFactory
         $label = str_replace('{name}', $name ?? '', $label);
         $label = str_replace('{title}', $reservation->Title ?? '', $label);
         $label = str_replace('{description}', $reservation->Description ?? '', $label);
-        $label = str_replace('{email}', $reservation->OwnerEmailAddress, $label);
+        $label = str_replace('{email}', $reservation->OwnerEmailAddress ?? '', $label);
         $label = str_replace('{organization}', $reservation->OwnerOrganization ?? '', $label);
         $label = str_replace('{phone}', $reservation->OwnerPhone ?? '', $label);
         $label = str_replace('{position}', $reservation->OwnerPosition ?? '', $label);
